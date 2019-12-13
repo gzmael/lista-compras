@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Compras Supermercado</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="" method="post">
+        <legend>Lista de Compras</legend>
+        <div class="colunas">
+          <div>
+            <label for="nome">Nome do Produto</label>
+            <input type="text" id="nome" placeholder="Nome do Produto" />
+          </div>
+          <div>
+            <label for="valor">Valor (R$)</label>
+            <input
+              type="number"
+              step="0.01"
+              id="valor"
+              placeholder="Valor do Produto"
+            />
+          </div>
+        </div>
+        <input
+          type="button"
+          class="btn"
+          value="Adicionar"
+          onclick="adicionar()"
+        />
+      </form>
+      <div class="lista">
+        <h3>Lista</h3>
+      </div>
+      <div class="total">
+        <h3>Total: R$ <span id="total">123.00</span></h3>
+      </div>
+    </div>
+    <script>
+      const produtos = [];
+
+      function adicionar() {
+        const nome = document.getElementById("nome").value;
+        const valor = Number(document.getElementById("valor").value);
+        alert(nome);
+        alert(valor);
+      }
+
+      function exibir() {}
+
+      function total() {}
+    </script>
+  </body>
+</html>
