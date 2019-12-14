@@ -96,6 +96,7 @@ ul li:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 }
 .lista h3 input {
   width: 200px;

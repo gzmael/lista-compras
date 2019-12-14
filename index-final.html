@@ -35,7 +35,15 @@
         />
       </form>
       <div class="lista">
-        <h3>Lista</h3>
+        <h3>
+          Lista
+          <input
+            type="text"
+            id="busca"
+            placeholder="Buscar Produto"
+            onchange="buscar()"
+          />
+        </h3>
         <div id="saida"></div>
       </div>
       <div class="total">
@@ -77,19 +85,23 @@
         total();
       }
 
-      function exibir() {
+      function exibir(filtro = "") {
         /* Criar a lista de Produtos */
         const lista = document.createElement("ul");
+        let listaExibir = [];
 
-        /* Criar os itens da lista */
-        produtos.forEach(function(item) {
-          // cria um elemento li
+        if (filtro !== "") {
+          listaExibir = produtos.filter(function(produto) {
+            return produto[0].includes(filtro);
+          });
+        } else {
+          listaExibir = produtos;
+        }
+
+        listaExibir.forEach(function(item) {
           const listaItem = document.createElement("li");
-          // cria um texto
           const texto = document.createTextNode(item[0] + " - R$ " + item[1]);
-          // adiciona o texto no li
           listaItem.append(texto);
-          // adiciona o li na ul
           lista.append(listaItem);
         });
 
@@ -104,6 +116,11 @@
 
         const totalEl = document.getElementById("total");
         totalEl.innerText = total;
+      }
+
+      function buscar() {
+        var busca = document.getElementById("busca").value;
+        exibir(busca);
       }
 
       function soma(a, b) {
