@@ -47,7 +47,8 @@ form label {
   color: #666;
   font-weight: bold;
 }
-form input {
+form input,
+.lista h3 input {
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -90,4 +91,12 @@ ul li {
 }
 ul li:hover {
   background: #f1f1f1;
+}
+.lista h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lista h3 input {
+  width: 200px;
 }

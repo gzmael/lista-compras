@@ -35,7 +35,15 @@
         />
       </form>
       <div class="lista">
-        <h3>Lista</h3>
+        <h3>
+          Lista
+          <input
+            type="text"
+            id="busca"
+            placeholder="Buscar Produto"
+            onchange="buscar()"
+          />
+        </h3>
         <div id="saida"></div>
       </div>
       <div class="total">
@@ -44,6 +52,7 @@
     </div>
     <script>
       const produtos = [];
+      const produtosBuscados = [];
 
       function adicionar() {
         const nome = document.getElementById("nome").value;
@@ -55,6 +64,11 @@
       function exibir() {}
 
       function total() {}
+
+      function buscar() {
+        var busca = document.getElementById("busca").value;
+        alert(busca);
+      }
     </script>
   </body>
 </html>
