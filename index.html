@@ -47,7 +47,7 @@
         <div id="saida"></div>
       </div>
       <div class="total">
-        <h3>Total: R$ <span id="total">123.00</span></h3>
+        <h3>Total: R$ <span id="total">0.00</span></h3>
       </div>
     </div>
     <script>
@@ -57,6 +57,7 @@
       function adicionar() {
         const nome = document.getElementById("nome").value;
         const valor = Number(document.getElementById("valor").value);
+        const form = document.getElementById("form");
         alert(nome);
         alert(valor);
       }
