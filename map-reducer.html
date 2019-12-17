@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var produtos = [
+        ["café", 3.4],
+        ["pão", 4],
+        ["leite", 2.75],
+        ["chocolate", 5]
+      ];
+
+      var valores = produtos.map(multiplicar);
+      console.log(valores);
+
+      function multiplicar(elemento) {
+        return [elemento[0], elemento[1] * 2];
+      }
+
+      var valores = [2, 4, 6, 8, 10];
+      var total = valores.reduce((total, valor) => (total += valor), 5);
+
+      console.log(total); // 35
+    </script>
+  </body>
+</html>

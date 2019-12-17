@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const produtos = [2, 4, 6, 7, 10, 34, -3];
+
+      var resultado = produtos.find(function(elemento) {
+        if (elemento > 9) return true;
+      });
+
+      // simplificando
+      var resultado = produtos.find(function(elemento) {
+        return elemento > 9;
+      });
+
+      // simplificando mais ainda
+      var resultado = produtos.find(elemento => elemento > 9);
+
+      alert(resultado); // 10
+
+      function teste(elemento) {
+        if (elemento > 9) return elemento;
+      }
+    </script>
+  </body>
+</html>
